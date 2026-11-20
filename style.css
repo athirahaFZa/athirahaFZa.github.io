@@ -1,0 +1,449 @@
+
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F4EBDD;
+    color: #302725;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --burgundy: #642D3B;
+    --cream: #F4EBDD;
+    --beige: #D9C7B6;
+    --brown: #302725;
+    --muted: #806F66;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+header {
+    padding: 25px 9%;
+    border-bottom: 1px solid var(--beige);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--burgundy);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #A45F6D;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 600px;
+    padding: 80px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-heading {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #95616B;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--burgundy);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    font-style: italic;
+}
+
+.hero h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--brown);
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 440px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--burgundy);
+    color: var(--cream);
+    padding: 16px 25px;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #874B59;
+}
+
+
+/* =================================
+   PROFILE IMAGE
+================================= */
+
+.hero-image {
+    width: 340px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 170px 170px 5px 5px;
+    border: 7px solid #E5D5C4;
+    display: block;
+}
+
+.image-caption {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
+.about {
+    background-color: #E9DCCE;
+    padding: 90px 9%;
+}
+
+.about h2,
+.section-title h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    font-weight: normal;
+    color: var(--burgundy);
+}
+
+.about h2 span,
+.section-title h2 span,
+.contact h2 span {
+    color: #A45F6D;
+}
+
+.about-content {
+    max-width: 750px;
+    margin-top: 25px;
+}
+
+.about-content p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+
+/* =================================
+   ASSIGNMENTS SECTION
+================================= */
+
+.assignments {
+    padding: 100px 9%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-note {
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.work-card {
+    background-color: #FBF6EE;
+    border: 1px solid var(--beige);
+    padding: 28px;
+    min-height: 350px;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #642D3B12;
+}
+
+.work-number {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #947F75;
+}
+
+.work-decoration {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    color: #D9C7B6;
+    margin: 35px 0 15px;
+}
+
+.category {
+    color: #95616B;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.work-card h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.work-description {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.work-card a {
+    color: var(--burgundy);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.work-card a:hover {
+    color: #A45F6D;
+}
+
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact {
+    background-color: #E9DCCE;
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact-list {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.contact-list a {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 5px;
+    border-bottom: 1px solid #D2BDAE;
+    text-decoration: none;
+    color: var(--burgundy);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.contact-list a:hover {
+    padding-left: 15px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: var(--burgundy);
+    color: var(--cream);
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 850px) {
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-image {
+        width: 280px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 65px 7%;
+    }
+
+    .hero-image {
+        width: 75%;
+        max-width: 320px;
+        align-self: center;
+    }
+
+    .hero-image img {
+        height: 380px;
+    }
+
+    .about,
+    .assignments,
+    .contact {
+        padding: 75px 7%;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .section-title h2,
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+}
